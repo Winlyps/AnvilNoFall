@@ -5,10 +5,11 @@ import org.bukkit.plugin.java.JavaPlugin
 class AnvilNoFall : JavaPlugin() {
 
     override fun onEnable() {
-        // Plugin startup logic
+        server.pluginManager.registerEvents(AnvilNoFallListener(this), this)
+        logger.info("AnvilNoFall plugin has been enabled.")
     }
 
     override fun onDisable() {
-        // Plugin shutdown logic
+        logger.info("AnvilNoFall plugin has been disabled.")
     }
 }
